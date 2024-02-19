@@ -1,6 +1,6 @@
 import React from 'react'
 import EstimateForm from './EstimateForm'
-import latino from "../images/latino.png"
+import latino from "../assets/img/latino.png"
 
 
 export default function Estimate() {

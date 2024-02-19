@@ -1,7 +1,7 @@
 import React from 'react';
-import profilePic from '../images/profile pic.jpg';
-import chart from '../images/Pie chart-amico.png';
-import book from '../images/Hand holding pen-amico.png';
+import profilePic from '../assets/img/profile pic.jpg';
+import chart from '../assets/img/Pie chart-amico.png';
+import book from '../assets/img/Hand holding pen-amico.png';
 import { 
   AiOutlineHome, 
   AiOutlineStock, 

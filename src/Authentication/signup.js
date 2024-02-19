@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import toast, { Toaster } from "react-hot-toast";
 import { registerValidation } from "../helper/validate";
 import logo from "../assets/img/logo.png";
+import '../assets/css/auth.css';
 
 
 
@@ -113,7 +114,7 @@ const Signup = () => {
                 <button type="submit" id="btn" className="btn text-center">Sign Up</button>
                 </div>
                 </form>
-              <div className="form__footer">Already have an account?{" "}<Link className="form__footer-link" to="/login">Login</Link>
+              <div className="form__footer text-center">Already have an account?{" "}<Link className="form__footer-link" to="/login">Login</Link>
             </div>
           </div>
         </div>

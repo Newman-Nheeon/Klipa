@@ -4,6 +4,7 @@ import logo from '../assets/img/logo.png';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useFormik } from 'formik';
 import toast, { Toaster } from "react-hot-toast";
+import '../assets/css/auth.css';
 
 
 function Login() {

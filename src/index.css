@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .hero {
-  background-image: url("./images/Mask\ group.png");
+  background-image: url("./assets/img/Mask\ group.png");
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .heroser{
-  background-image: url("./images/Mask\ group.png");
+  background-image: url("./assets/img/Mask\ group.png");
   background-position: center;
   background-repeat: no-repeat;
 }
