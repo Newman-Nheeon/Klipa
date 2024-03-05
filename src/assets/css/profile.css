@@ -7,19 +7,21 @@
   
 body {
     background-color: #fff;
+    color: #000;
 }
 
 .container {
    padding: 60px 150px 60px 150px;
 }
 
-.everything {
+.content {
     display: flex;
     justify-content: space-between;
 }
 
 .sidebar {
 background-color: #f5ebe1;
+color: #000;
 width: 35%;
 height: 600px;
 border-radius: 4px;
@@ -74,7 +76,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    margin-left: 15px;
 }
 
-.second-side {
+.right-side {
     display: inline-block;
 }
 
@@ -85,9 +87,9 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f5ebe1;
     width: 100%;
     height: 300px;
-border-radius: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-position: relative; 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; 
 }
 
 .trans-history .trans-header {
@@ -143,10 +145,10 @@ position: relative;
     background-color: #f5ebe1;
     width: 100%;
     height: 275px;
-border-radius: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-position: relative;    
-margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;    
+    margin-top: 20px;
 }
 
 .wishlist p{

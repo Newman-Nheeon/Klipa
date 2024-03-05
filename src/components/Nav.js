@@ -14,7 +14,7 @@ export default function Nav() {
       {nav.map((item) => (
         <NavItems key={item.id} {...item} />
       ))}
-      <Button children="Book an appointment"/>
+      <Button children="Login/Signup"/>
       </div>
     </div>
   );
