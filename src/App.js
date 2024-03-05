@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.css';
 import Profile from './pages/profile';
 import './style.css';
+import Appointment from './pages/Appointment';
 
 export default function App() {
   const router = createBrowserRouter([
@@ -31,6 +32,10 @@ export default function App() {
     {
       path: "/profile",
       element: <Profile />,
+    },
+    {
+      path: "/appointment",
+      element: <Appointment />,
     },
   ]);
   return (

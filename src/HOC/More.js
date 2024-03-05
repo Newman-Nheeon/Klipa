@@ -2,30 +2,28 @@ import React, { useState } from "react";
 import { more } from "../data";
 
 export default function More() {
-  const [open, setisOpen] = useState(false);
-  const click = () => {
-    setisOpen(open);
+  const [open, setisOpen] = useState(null);
+  const click = (index) => {
+    setisOpen(open === index ? null : index);
   };
   return (
-    <div className="mx-[80px]  bg-brownish py-6">
+    <div className="mx-[80px]
+     bg-brownish py-6">
       <h1 className="font-[700] text-[35px] text-blackish mb-[15px] text-center">
         Want to know more?
       </h1>
-      {more.map((item) => (
-        <div className="grid grid-cols-2 space-x-20" key={item.id}>
+      {more.map((item, index) => (
+        <div className="grid grid-cols-2 space-x-20" key={index}>
           <div className="flex flex-col">
             <p
               className="text-blackish text-[18px] font-[400] p-4 hover:bg-rosebrown"
-              onClick={click}
+              onClick={()=>click(index)}
             >
               {item.title}
             </p>
           </div>
-          {open ? (
-            <div>
-              <h1 className="font-[600] text-[32px] text-blackish"></h1>
-            </div>
-          ) : (
+          {open === index &&
+          (
             <p className="text-blackish text-[18px] font-[400]">
               Lorem ipsum dolor sit amet consectetur. Tortor consectetur egestas
               tristique eget. Amet maecenas imperdiet arcu lorem nunc donec.

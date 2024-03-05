@@ -18,7 +18,7 @@ export default function Home() {
       <Bookmark/>
       <GeoBarber/>
       <Estimate/>
-      {/* <More/> */}
+      <More/>
       <NewsLetter/>
       <Footer/>
     </div>

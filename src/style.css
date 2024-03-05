@@ -60,13 +60,15 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
  .sidebar-links{
     padding-top: 1px;
     padding-left: 8px;
-
+   
 }
 
 .sidebar-links .links{
     margin-top: 30px;
     padding: 5px;
-   
+    display: flex;
+    align-items: center;
+
 }
 
 

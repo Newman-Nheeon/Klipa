@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 export default function GeoForm() {
   return (
-    <div className="bg-whitish p-6 rounded-lg w-[427px] absolute right-40 flex flex-col ">
+    <div className="bg-whitish p-6 rounded-lg shadow max-w-[427px] md:absolute md:right-40 flex flex-col ">
       <h1 className="text-blackish my-4 font-[600] text-[29px]">
         Barbers near you
       </h1>
