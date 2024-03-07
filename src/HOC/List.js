@@ -1,5 +1,5 @@
 import React from "react";
-import love from "../images/love.svg"
+import love from "../assets/img/love.svg"
 
 export default function List({ title, price, more, img }) {
   return (

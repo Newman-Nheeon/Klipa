@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import location from "../images/location.svg";
+import location from 
+"../assets/img/location.svg";
 
 export default function NavBoard() {
   return (

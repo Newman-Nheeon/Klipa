@@ -6,18 +6,13 @@ export const nav = [
   },
   {
     id: 1,
-    name: "About Us",
-    link: "/about",
-  },
-  {
-    id: 1,
-    name: "Our Services",
+    name: "Services",
     link: "/service",
   },
   {
     id: 1,
-    name: "Contact Us",
-    link: "/contact",
+    name: "Appointment",
+    link: "/appointment",
   },
   {
     id: 1,

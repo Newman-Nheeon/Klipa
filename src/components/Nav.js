@@ -20,8 +20,8 @@ export default function Nav() {
           {nav.map((item) => (
             <NavItems key={item.id} {...item} />
           ))}
-          <NavLink to="/appointment">
-            <Button children="Book an appointment" />
+          <NavLink to="/login">
+            <Button children="Login/Signup" />
           </NavLink>
         </div>
         <div className="md:hidden" onClick={open}>
@@ -34,7 +34,9 @@ export default function Nav() {
             {nav.map((item) => (
               <NavItems key={item.id} {...item} />
             ))}
-            <Button children="Book an appointment" />
+            <NavLink to="/login">
+              <Button children="Login/Signup" />
+            </NavLink>
           </div>
         </div>
       )}

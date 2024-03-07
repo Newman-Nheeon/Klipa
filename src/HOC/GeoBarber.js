@@ -1,5 +1,5 @@
 import React from 'react'
-import map from "../images/geo.png"
+import map from "../assets/img/geo.png"
 import GeoForm from './GeoForm'
 
 export default function GeoBarber () {

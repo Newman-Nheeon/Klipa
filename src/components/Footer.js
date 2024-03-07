@@ -1,8 +1,8 @@
 import React from "react";
-import x from "../images/xapp.svg";
-import insta from "../images/in.svg";
-import fb from "../images/fb.svg";
-import link from "../images/linkedin.svg";
+import x from "../assets/img/xapp.svg";
+import insta from "../assets/img/in.svg";
+import fb from "../assets/img/fb.svg";
+import link from "../assets/img/linkedin.svg";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {

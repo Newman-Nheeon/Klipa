@@ -5,10 +5,11 @@ import ServiceList from './pages/ServiceList';
 import Signup from './Authentication/signup';
 import Login from './Authentication/login'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/css/style.css';
 import Profile from './pages/profile';
 import './style.css';
 import Appointment from './pages/Appointment';
+import './assets/css/styles.css';
+
 
 export default function App() {
   const router = createBrowserRouter([
