@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import NavBoard from './NavBoard'
+import BarBoard from './BarBoard'
 
 export default function Board() {
   return (
@@ -8,6 +9,7 @@ export default function Board() {
       <Sidebar/>
       <div>
         <NavBoard/>
+        <BarBoard/>
       </div>
     </div>
   )
