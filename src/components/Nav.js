@@ -1,27 +1,31 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { nav } from "../data";
 import logo from "../assets/img/logo.png";
 import NavItems from "./NavItems";
-import Button from "./Button";
+import Button from "./Button";  
+import { FaUserCircle } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
+
 export default function Nav() {
   const [openNav, setOpenNav] = useState(false);
 
   const open = () => {
     setOpenNav((prev) => !prev);
   };
+
   return (
     <div className="sm:px-[80px] px-[40px] py-[15px] fixed top-0 left-0 right-0 bg-white">
       <div className="flex justify-between items-center">
         <img src={logo} alt="logo" style={{ width: "100px", height: "auto" }} />
-
         <div className="md:flex md:space-x-[48px] space-x-[30px] hidden">
           {nav.map((item) => (
             <NavItems key={item.id} {...item} />
           ))}
-          <NavLink to="/login">
-            <Button children="Login/Signup" />
+          <NavLink to="/signup">
+            <Button children="Create Account" />
+          </NavLink>
+          <NavLink to="/profile">
+            <FaUserCircle size={30} style={{ cursor: 'pointer', margin: '10px' }} />
           </NavLink>
         </div>
         <div className="md:hidden" onClick={open}>
@@ -34,9 +38,7 @@ export default function Nav() {
             {nav.map((item) => (
               <NavItems key={item.id} {...item} />
             ))}
-            <NavLink to="/login">
-              <Button children="Login/Signup" />
-            </NavLink>
+            
           </div>
         </div>
       )}

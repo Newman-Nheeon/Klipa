@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useFormik } from "formik";
@@ -6,11 +6,13 @@ import toast, { Toaster } from "react-hot-toast";
 import { registerValidation } from "../helper/validate";
 import logo from "../assets/img/logo.png";
 import '../assets/css/auth.css';
-
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false); 
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -43,7 +45,7 @@ const Signup = () => {
           toast.success("Registration Successful");
           await new Promise((resolve) => setTimeout(resolve, 1000));
           actions.resetForm();
-          navigate('/');
+          navigate('/login');
         } 
       } catch (error) {
         console.error(error);
@@ -59,6 +61,14 @@ const Signup = () => {
       }
     }
   });
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(prev => !prev);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setConfirmPasswordVisible(prev => !prev);
+  };
 
   return (
     <div className="split right">
@@ -100,14 +110,44 @@ const Signup = () => {
                 <input {...formik.getFieldProps("email")} type="email" className="form-control p-1 shadow-sm border-1 border-black mb-2" id="email" placeholder="Email Address"/>
               </div>
 
-              <div className="password">
-                <label htmlFor="password" className="form-label ">Password</label>
-                <input {...formik.getFieldProps("password")} type={"password"} className="form-control p-1 shadow-sm border-1 border-black mb-2" id="password" placeholder="Password"/>
-              </div>
 
-              <div className="repeat_password">
-                <label htmlFor="repeat_password" className="form-label ">Confirm Password</label>
-                <input {...formik.getFieldProps("repeat_password")} type={"password"} className="form-control p-1 shadow-sm border-1 border-black mb-2" id="repeat_password" placeholder="Confirm Password"/>
+<div className="password">
+                <label htmlFor="password" className="form-label ">Password</label>
+                <div className="relative">
+                  <input
+                    {...formik.getFieldProps("password")}
+                    type={passwordVisible ? "text" : "password"}
+                    className="form-control p-1 shadow-sm border-1 border-black mb-2"
+                    id="password"
+                    placeholder="Password"
+                  />
+                  <button
+                    type="button"
+                    onClick={togglePasswordVisibility}
+                    className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-700"
+                  >
+                    {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
+              </div>
+              <div className="confirm-password">
+                <label htmlFor="confirm_password" className="form-label ">Confirm Password</label>
+                <div className="relative">
+                  <input
+                    {...formik.getFieldProps("repeat_password")}
+                    type={confirmPasswordVisible ? "text" : "password"}
+                    className="form-control p-1 shadow-sm border-1 border-black mb-2"
+                    id="confirm_password"
+                    placeholder="Confirm Password"
+                  />
+                  <button
+                    type="button"
+                    onClick={toggleConfirmPasswordVisibility}
+                    className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-700"
+                  >
+                    {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
               </div>
 
               <div className="text-center mt-5 mb-3">
