@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../assets/img/logo.png';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useFormik } from 'formik';
 import toast, { Toaster } from "react-hot-toast";
 import '../assets/css/auth.css';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 function Login() {
   const navigate = useNavigate();  // Initialized the history object
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false); 
   const location = useLocation();
   const from = location.state?.from?.pathname || '/profile';
 
@@ -59,6 +62,11 @@ function Login() {
     }
   });
 
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(prev => !prev);
+  };
+
+
   return (
     <div className="split right">
       <div className="split left">
@@ -90,21 +98,31 @@ function Login() {
               id="email" 
               placeholder="Email Address" 
               {...formik.getFieldProps('email')} 
-              required 
+              required  
+              
             />
           </div>
 
-          <div className="mb-3 me-2 ms-2">
-            <label htmlFor="password" className="form-label">Password</label>
-            <input 
-              type="password" 
-              className="form-control p-2 shadow-sm" 
-              id="password" 
-              placeholder="Password" 
-              {...formik.getFieldProps('password')} 
-              required 
-            />
-          </div>
+          <div className="mb-3 me-2 ms-2 position-relative">
+                <label htmlFor="password" className="form-label">Password</label>
+                <input 
+                  type={passwordVisible ? "text" : "password"}
+                  className="form-control p-2 shadow-sm" 
+                  id="password" 
+                  placeholder="Password" 
+                  {...formik.getFieldProps('password')} 
+                  required 
+                />
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute inset-y-0 right-0 flex items-center px-3 my-3 text-gray-700"
+                  style={{ top: '50%', transform: 'translateY(-50%)' }}
+                >
+                  {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              </div>
+
 
           <div className="text-center mt-5 mb-5">
             <button type="submit" id="btn" className="btn text-center">Login</button>

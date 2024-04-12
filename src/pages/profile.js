@@ -12,10 +12,10 @@ export default function Profile() {
   return (
     <div>
       <Nav />
-      <div className='container'>
-        <div className='content'>
+      <div className='ms-32 mt-20 mb-10'>
+        <div className='flex font-sans'>
           <SideBar />
-          <div className='right-side'>
+          <div className='transaction/wishlist block ms-16 mt-8 mb-10'>
             <Transactions />
             <Wishlist />
           </div>

@@ -1,3 +1,5 @@
+
+
 export const nav = [
   {
     id: 1,
@@ -16,9 +18,10 @@ export const nav = [
   },
   {
     id: 1,
-    name: "User Profile",
-    link: "/profile",
+    name: "Login",
+    link: "/login",
   },
+  
 ];
 
 export const services = [
